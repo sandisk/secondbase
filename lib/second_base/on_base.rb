@@ -10,8 +10,6 @@ module SecondBase
       return
     end
 
-    Rake::Task["db:load_config"].invoke
-
     original_config = ActiveRecord::Tasks::DatabaseTasks.current_config
     original_configurations = ActiveRecord::Base.configurations
     original_migrations_path = ActiveRecord::Tasks::DatabaseTasks.migrations_paths
